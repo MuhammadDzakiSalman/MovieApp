@@ -1,0 +1,53 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="64dp"
+        android:padding="4dp">
+
+        <!-- SLIDER -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/sliderViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="4dp"
+            android:overScrollMode="never"/>
+
+        <!-- INDIKATOR -->
+        <LinearLayout
+            android:id="@+id/sliderIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvDescriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular"
+            android:textSize="16sp"
+            android:paddingStart="8dp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <!-- MOVIE LIST -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="2dp"
+            tools:listitem="@layout/item_movie" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
